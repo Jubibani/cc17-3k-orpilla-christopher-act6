@@ -1,0 +1,32 @@
+[
+  {
+    "dayNumber": 1,
+    "dayTitle:": "Procrastination",
+    "dayDescription": "too lazy to write desc...",
+    "dayImage": "bmo_code.jpg"
+  },
+  {
+    "dayNumber": 2,
+    "dayTitle:": "Getting back up",
+    "dayDescription": "getting back on my grind if from procrastination",
+    "dayImage": "bmo_code.jpg"
+  },
+  {
+    "dayNumber": 3,
+    "dayTitle:": "I lost.",
+    "dayDescription": "procrastination won.",
+    "dayImage": "bmo_code.jpg"
+  },
+  {
+    "dayNumber": 4,
+    "dayTitle:": "brain scrolling",
+    "dayDescription": "wasting my time",
+    "dayImage": "bmo_code.jpg"
+  },
+  {
+    "dayNumber": 5,
+    "dayTitle:": "I have to get back up",
+    "dayDescription": "getting back up sure is hard",
+    "dayImage": "bmo_code.jpg"
+  }
+]
