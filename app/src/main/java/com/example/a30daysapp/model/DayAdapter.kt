@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a30daysapp.model.Day
 
@@ -26,19 +27,22 @@ class DayAdapter(private val days: List<Day>) : RecyclerView.Adapter<DayAdapter.
     override fun onBindViewHolder(holder: DayViewHolder, position: Int) {
         val day = days[position]
         holder.dayNumberTextView.text = "Day ${day.dayNumber}"
-        holder.dayTitleTextView.text = day.dayTitle
         holder.dayDescriptionTextView.text = day.dayDescription
+        holder.dayTitleTextView.text = day.dayTitle
 
-        // Load image dynamically using getIdentifier()
-        val imageResId = holder.itemView.context.resources.getIdentifier(
-            day.dayImageResId.replace(".jpg", ""), "drawable", holder.itemView.context.packageName
+
+        // Get the resource ID by name, or null if it doesn't exist
+        val resourceId = holder.dayImageView.context.resources.getIdentifier(
+            day.dayImageResId, "drawable", holder.dayImageView.context.packageName
         )
 
-        if (imageResId != 0) { // Check if the resource ID is valid
-            holder.dayImageView.setImageResource(imageResId)
+        if (resourceId != 0) { // Valid resource ID
+            holder.dayImageView.setImageDrawable(
+                AppCompatResources.getDrawable(holder.dayImageView.context, resourceId)
+            )
         } else {
-            // Handle the case where the image resource is not found
-            holder.dayImageView.setImageResource(R.drawable.bmo_code) // Set a default image
+            // Set a default or placeholder image if the resource doesn't exist
+            holder.dayImageView.setImageResource(R.drawable.bmo_code) // Replace with your placeholder drawable
         }
     }
 
