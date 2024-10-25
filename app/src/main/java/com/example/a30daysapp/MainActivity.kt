@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a30daysapp.model.Day
-import utilities.DayDataLoader
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView

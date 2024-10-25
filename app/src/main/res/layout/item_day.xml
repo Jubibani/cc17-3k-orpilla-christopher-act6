@@ -6,6 +6,8 @@
     android:padding="16dp">
 
     <TextView
+        android:textColor="@color/secondaryColor"
+
         android:id="@+id/dayNumberTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,6 +15,7 @@
         android:textSize="18sp"/>
 
     <TextView
+        android:textColor="@color/textColor"
         android:id="@+id/dayTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,6 +29,7 @@
         android:layout_marginTop="8dp"/>
 
     <TextView
+        android:textColor="@color/textColor"
         android:id="@+id/dayDescriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

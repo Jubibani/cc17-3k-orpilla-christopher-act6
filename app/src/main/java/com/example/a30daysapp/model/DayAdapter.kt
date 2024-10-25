@@ -1,5 +1,6 @@
 package com.example.a30daysapp
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,7 @@ class DayAdapter(private val days: List<Day>) : RecyclerView.Adapter<DayAdapter.
         return DayViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: DayViewHolder, position: Int) {
         val day = days[position]
         holder.dayNumberTextView.text = "Day ${day.dayNumber}"
@@ -40,9 +42,6 @@ class DayAdapter(private val days: List<Day>) : RecyclerView.Adapter<DayAdapter.
             holder.dayImageView.setImageDrawable(
                 AppCompatResources.getDrawable(holder.dayImageView.context, resourceId)
             )
-        } else {
-            // Set a default or placeholder image if the resource doesn't exist
-            holder.dayImageView.setImageResource(R.drawable.bmo_code) // Replace with your placeholder drawable
         }
     }
 
